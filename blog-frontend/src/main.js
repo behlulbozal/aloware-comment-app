@@ -4,8 +4,7 @@ import router from "./router";
 import vuetify from "./plugins/vuetify";
 import { createPinia } from "pinia";
 import { loadFonts } from "./plugins/webfontloader";
-import 'material-design-icons-iconfont/dist/material-design-icons.css'
-
+import "material-design-icons-iconfont/dist/material-design-icons.css";
 
 loadFonts();
 

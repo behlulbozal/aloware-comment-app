@@ -1,6 +1,6 @@
 <template>
-  <v-col>
-    <v-container>
+  <v-container>
+    <v-col>
       <v-row>
         <v-col cols="auto">
           <img
@@ -19,19 +19,49 @@
               Login
             </v-btn>
             <v-btn class="text-white" color="green"> Get Demo </v-btn>
-            <v-icon large color="ma-5 black darken-2"> mdi-menu </v-icon>
+            <v-icon large color="ma-5 ml-5 black darken-2"> mdi-menu </v-icon>
           </v-row>
         </v-col>
       </v-row>
-    </v-container>
-    <slot />
-  </v-col>
+      <v-breadcrumbs :items="state.items"></v-breadcrumbs>
+      <slot />
+    </v-col>
+  </v-container>
 </template>
 
 <script>
-import { defineComponent } from "vue";
+import { defineComponent, reactive } from "vue";
 export default defineComponent({
   name: "app-layout",
+  setup() {
+    const state = reactive({
+      items: [
+        {
+          text: "Home",
+          disabled: false,
+          href: "/",
+        },
+        {
+          text: "Resources",
+          disabled: false,
+          href: "/",
+        },
+        {
+          text: "Blogs",
+          disabled: true,
+          href: "/",
+        },
+        {
+          text: "6 software tools for insurance agents that will help your business thrive this 2022 ",
+          disabled: true,
+          href: "/",
+        },
+      ],
+    });
+    return {
+      state,
+    };
+  },
 });
 </script>
 

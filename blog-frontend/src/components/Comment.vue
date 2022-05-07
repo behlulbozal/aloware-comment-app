@@ -6,14 +6,11 @@
           color="grey-darken-3"
           image="https://www.w3schools.com/w3images/avatar6.png"
         ></v-avatar>
-        <span class="text-h6 font-weight text-white ml-3">Angela</span>
+        <span class="text-h6 font-weight text-white ml-3">{{ name }}</span>
       </v-card-title>
 
       <v-card-text class="text-p text-black">
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever
-        since the 1500s, when an unknown printer took a galley of type and
-        scrambled it to 
+        {{ comment }}
       </v-card-text>
     </v-card>
   </v-row>
@@ -23,6 +20,7 @@
 import { defineComponent, reactive } from "vue";
 export default defineComponent({
   name: "comment-component",
+  props: ["name", "comment"],
   setup() {
     const state = reactive({
       expand: false,
@@ -51,6 +49,6 @@ export default defineComponent({
   width: 100%;
 }
 .card-bg {
-  background-color: rgba(70, 70, 70, 0.332);
+  background-color: rgba(100, 128, 106, 0.332);
 }
 </style>

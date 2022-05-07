@@ -8,10 +8,14 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "@mdi/font": "5.9.55",
     "pinia": "^2.0.14",
+    "roboto-fontface": "*",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3",
-    "vuex": "^4.0.0"
+    "vuetify": "^3.0.0-beta.0",
+    "vuex": "^4.0.0",
+    "webfontloader": "^1.0.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-router": "~5.0.0",
@@ -21,6 +25,10 @@
     "@vue/test-utils": "^2.0.0-0",
     "@vue/vue3-jest": "^27.0.0-alpha.1",
     "babel-jest": "^27.0.6",
-    "jest": "^27.0.5"
+    "jest": "^27.0.5",
+    "sass": "^1.38.0",
+    "sass-loader": "^10.0.0",
+    "vue-cli-plugin-vuetify": "~2.4.8",
+    "vuetify-loader": "^2.0.0-alpha.0"
   }
 }

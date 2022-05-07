@@ -8,7 +8,7 @@
 import { defineComponent, reactive, computed } from "vue";
 import { useBlogStore } from "@/store//blog";
 export default defineComponent({
-  name: "moduls-component",
+  name: "post-page",
 
   setup() {
     const state = reactive({});
